@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">Damian Strom</div>
+    <div class="date-time"></div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#resume">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <h1>Welcome to my <br /> Portfolio!</h1>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a aspiring Student of UCF learning front Web Fullstack Developement</p>
+    </section>
+
+    <!-- Work Section -->
+    <section id="Projects">
+      <h3>Work</h3>
+      <p><span class="subtitle">My projects</span></p>
+      <div class="container">
+        <div class="card">
+          <img src="hacker.jpg" alt="Project 1" />
+          <h4>Surf Report</h4>
+          <p>Mern Stack</p>
+        </div>
+        <div class="card">
+          <img src="hacker.jpg" alt="Project 2" />
+          <h4>LED Wall</h4>
+          <p>Node/IoT</p>
+        </div>
+        <div class="card">
+          <img src="hacker.jpg" alt="Project 3" />
+          <h4>calculator</h4>
+          <p>React/JavaScrypt/CSS</p>
+        </div>
+        <div class="card">
+          <img src="hacker.jpg" alt="Project 4" />
+          <h4>Pastel Puzzles</h4>
+          <p>Mern Stack</p>
+        </div>
+        <div class="card">
+          <img src="hacker.jpg" alt="Project 5" />
+          <h4>Run Buddy</h4>
+          <p>HTML/CSS</p>
+        </div>
+        <div class="card">
+          <img src="hacker.jpg" alt="Project 6" />
+          <h4>Zombie Apocalypes</h4>
+          <p>HTML</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>#######</p>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>#######</p>
+    </section>
+  </main>
+
+  <script>
+    function updateDateTime() {
+      const dateTimeElement = document.querySelector('.date-time');
+      const currentDateTime = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+      const formattedDateTime = currentDateTime.toLocaleDateString('en-US', options);
+      dateTimeElement.textContent = formattedDateTime;
+    }
+
+    setInterval(updateDateTime, 1000); // Update the time and date every second
+  </script>
+</body>
+</html>

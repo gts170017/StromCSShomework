@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: #121212;
+  }
+  
+  header {
+    background-color: #1e90ff;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logo,
+  .date-time {
+    background-color: #000000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  
+  .logo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+  }
+  
+  .date-time {
+    font-size: 1.2rem;
+    color: #ffffff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+  
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #000000;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    background-color: #2b2b2b;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  h1, h2, h3, h4 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  main > h1 {
+    background-color: #1e90ff;
+    color: #ffffff;
+    padding: 80px;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  #about, #contact, #resume {
+    background-color: #1e90ff;
+    padding: 40px;
+    border-radius: 20px;
+  }
+  
+  .subtitle {
+    background-color: #1e90ff;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    gap: 80px;
+    position: relative;
+    padding-left: 100px;
+  }
+  
+  .container::before {
+    content: "Projects";
+    position: absolute;
+    top: 0;
+    left: 27rem;
+    font-size: 12rem;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    transform: translateX(-50%);
+  }
+  
+  .container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 530px;
+    bottom: 0;
+    width: 10px;
+    background-color: #1e90ff;
+  }
+  
+  .container::before,
+  .container::after {
+    height: 100%;
+  }
+  
+  .card {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    flex-basis: calc(33.33% - 80px);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+  
+.card:hover {
+    color: #ffffff;
+    background-color: #1e90ff;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+  .card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #2b2b2b;
+    margin: 40px 0;
+  }
+
+  @media (max-width: 1024px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .logo,
+    .date-time {
+      margin-bottom: 10px;
+    }
+  
+    .date-time {
+      position: static;
+      transform: none;
+    }
+  
+    header nav {
+      justify-content: center;
+    }
+  
+    .container {
+      padding-left: 0;
+    }
+  
+    .container::before,
+    .container::after {
+      display: none;
+    }
+  
+    .card {
+      flex-basis: calc(50% - 40px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h1, h2, h3, h4 {
+      font-size: 2rem;
+    }
+  
+    main > h1 {
+      padding: 40px;
+    }
+  
+    #about, #contact, #resume {
+      padding: 20px;
+    }
+  
+    .card {
+      flex-basis: calc(100% - 40px);
+    }
+  }
